@@ -9,6 +9,7 @@ import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class GUI extends JFrame implements KeyListener{
@@ -87,8 +88,11 @@ public class GUI extends JFrame implements KeyListener{
 	}
 
 	public void pageDecision(String command) {
-		// TODO Auto-generated method stub
-
+		if(command.equalsIgnoreCase("about")){
+			JOptionPane.showMessageDialog(this, "This Application has been developed by Ajeet Singh and Rishabh Thukral. (•_•) ( •_•)","Developers",JOptionPane.INFORMATION_MESSAGE);
+		}else{
+			JOptionPane.showMessageDialog(this, "Hey this feature is in pro version You need to buy it. (`|_|`)", "Pro Required", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
 	@Override
