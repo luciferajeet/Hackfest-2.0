@@ -11,10 +11,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class GUI extends JFrame implements KeyListener{
 
 	JFrame welcomeFrame;
+	JFrame loginFrame;
 
 	JPanel namePanel;
 	JPanel loginPanel;
@@ -90,10 +92,62 @@ public class GUI extends JFrame implements KeyListener{
 	public void pageDecision(String command) {
 		if(command.equalsIgnoreCase("about")){
 			JOptionPane.showMessageDialog(this, "This Application has been developed by Ajeet Singh and Rishabh Thukral. (•_•) ( •_•)","Developers",JOptionPane.INFORMATION_MESSAGE);
-		}else{
-			JOptionPane.showMessageDialog(this, "Hey this feature is in pro version You need to buy it. (`|_|`)", "Pro Required", JOptionPane.ERROR_MESSAGE);
 		}
+
+		else if(command.equals("Login")){
+			loginScreen();
+		}
+
+		/*else{
+			JOptionPane.showMessageDialog(this, "Hey this feature is in pro version You need to buy it. (`|_|`)", "Pro Required", JOptionPane.ERROR_MESSAGE);
+		}*/
 	}
+
+	private void loginScreen() {
+		// TODO Auto-generated method stub
+		welcomeFrame.dispose();
+		loginFrame=new JFrame();
+		loginFrame.setSize(300,300);
+		loginFrame.setLocationRelativeTo(null);
+		loginFrame.setResizable(false);
+		loginFrame.setLayout(new GridLayout(3,2));
+		loginFrame.setDefaultCloseOperation(loginFrame.EXIT_ON_CLOSE);
+
+		JPanel idPanel=new JPanel();
+		JPanel pswrdPanel=new JPanel();
+		JPanel loginBtnPanel=new JPanel();
+		JPanel idInputPanel=new JPanel();
+		JPanel pswrdInputPanel=new JPanel();
+
+		JLabel idText=new JLabel("email:");
+		idPanel.add(idText);
+		loginFrame.add(idPanel);
+
+		JTextField idInput=new JTextField(10);
+		idInput.addKeyListener(this);
+		idInputPanel.add(idInput);
+		idInputPanel.add(Box.createHorizontalStrut(50));
+		loginFrame.add(idInputPanel);
+
+
+		JLabel pswrdText=new JLabel("password:");
+		pswrdPanel.add(pswrdText);
+		loginFrame.add(pswrdPanel);
+
+		JTextField pswrdInput=new JTextField(10);
+		pswrdInput.addKeyListener(this);
+		pswrdInputPanel.add(pswrdInput);
+		loginFrame.add(pswrdInputPanel);
+
+		JButton login=new JButton("Login");
+		login.setActionCommand("LoggedIn");
+		login.addActionListener(new ButtonClickListener());
+		loginBtnPanel.add(login);
+		loginFrame.add(loginBtnPanel);
+
+		loginFrame.setVisible(true);
+	}
+
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
