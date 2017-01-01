@@ -91,7 +91,7 @@ public class GUI extends JFrame implements KeyListener{
 
 	public void pageDecision(String command) {
 		if(command.equalsIgnoreCase("about")){
-			JOptionPane.showMessageDialog(this, "This Application has been developed by Ajeet Singh and Rishabh Thukral. (•_•) ( •_•)","Developers",JOptionPane.INFORMATION_MESSAGE);
+			aboutScreen();
 		}
 
 		else if(command.equals("Login")){
@@ -101,6 +101,46 @@ public class GUI extends JFrame implements KeyListener{
 		/*else{
 			JOptionPane.showMessageDialog(this, "Hey this feature is in pro version You need to buy it. (`|_|`)", "Pro Required", JOptionPane.ERROR_MESSAGE);
 		}*/
+	}
+
+	private void aboutScreen(){
+		JFrame aboutFrame=new JFrame("About");
+		aboutFrame.setSize(600,300);
+		aboutFrame.setLocationRelativeTo(null);
+		aboutFrame.setResizable(false);
+		aboutFrame.setLayout(new GridLayout(6,1));
+		aboutFrame.setDefaultCloseOperation(loginFrame.DISPOSE_ON_CLOSE);
+
+		JPanel msg=new JPanel();
+		JPanel msg1=new JPanel();
+		JPanel msg2=new JPanel();
+		JPanel msg3=new JPanel();
+		JPanel msg4=new JPanel();
+		JPanel msg5=new JPanel();
+
+		JLabel txt=new JLabel("This Application has been developed by team Defaulting. This App is designed to");
+		JLabel txt1=new JLabel("recommend tasks to the users which will reduce Greenhouse effect. The tasks would");
+		JLabel txt2=new JLabel("be calibrated to maximize the impact of each task while keeping in mind the user's ");
+		JLabel txt3=new JLabel("preference and convenience. The primary purpose of this tool is to minimize greenhouse");
+		JLabel txt4=new JLabel("emission on user-by-user level to cut down the biggest non-industrial production");
+		JLabel txt5=new JLabel("of global warming without the need of major expenditure and fewer lifestyle changes.");
+
+		msg.add(txt);
+		msg1.add(txt1);
+		msg2.add(txt2);
+		msg3.add(txt3);
+		msg4.add(txt4);
+		msg5.add(txt5);
+
+		aboutFrame.add(msg);
+		aboutFrame.add(msg1);
+		aboutFrame.add(msg2);
+		aboutFrame.add(msg3);
+		aboutFrame.add(msg4);
+		aboutFrame.add(msg5);
+
+		aboutFrame.setVisible(true);
+
 	}
 
 	private void loginScreen() {
