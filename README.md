@@ -13,20 +13,20 @@ Our team is building a tool to fight the Global Warming and Greenhouse Effect by
 ###Tech Stack
 
 ####Frontend:
-- HTML CSS and JavaScript
-- JQuery
-- AngularJS
+ - HTML CSS and JavaScript
+ - JQuery
+ - AngularJS
 
 ####Backend:
-- Django/Flask
-- Spring _(Maybe)_
+ - Django/Flask
+ - Spring _(Maybe)_
 
 ####Machine Learning:
-- JavaML
-- Scikit-learn
+ - JavaML
+ - Scikit-learn
 
 ####Database:
-- Sqlite
-- MongoDB _(Maybe)_
+ - Sqlite
+ - MongoDB _(Maybe)_
 
 
