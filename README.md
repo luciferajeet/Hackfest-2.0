@@ -1,8 +1,8 @@
 #Project Zemlya Spasti (_HackFest 2.0_)
 ##Team Defaulting 
 ###Badass Coders:
-* Anirudh Jain [_@sponde25_](https://github.com/sponde25)
 * Ajeet Singh [_@luciferajeet_](https://github.com/luciferajeet)
+* Anirudh Jain [_@sponde25_](https://github.com/sponde25)
 * Nikita Kapoor [_@nikita204_](https://github.com/nikita204)
 * Rishabh Thukral [_@supercool276_](https://github.com/supercool276)
 * Shril Kumar [_@shril_](https://github.com/shril)
