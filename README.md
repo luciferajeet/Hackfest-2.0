@@ -1,5 +1,11 @@
 #Project Zemlya spasti
-##Team Defaulting (@sponde25 @luciferajeet @nikita204 @supercool276 @shril)
+##Team Defaulting 
+###Team Members:
+*Anirudh Jain _@sponde25_ 
+*Ajeet Singh _@luciferajeet_
+*Nikita Kapoor _@nikita204_
+*Rishabh Thukral _@supercool276_
+*Shril Kumar _@shril_
 ###Purpose : HackFest 2.0
 
 ###Description
